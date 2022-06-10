@@ -1,0 +1,58 @@
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Charts */ 
+.graphBoxup 
+{
+   position: relative; 
+   width: 100%;
+   padding: 10px;
+   display: grid;
+   /* grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-gap: 10px; */
+   min-height: 200px;
+}
+
+.box 
+{
+    position: relative;
+    background: #fff;
+    padding: 5px;
+    width: 100%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    /* box-sizing: content-box; */
+    /* background-clip: padding-box; */
+    background: linear-gradient(#fff, #fff) padding-box,
+                linear-gradient(45deg, #090979, #008daa) border-box;
+    border: 3px solid transparent;
+    border-radius: 20px;
+}
+
+.graphBoxmap {
+    position: relative; 
+    width: 100%;
+    padding: 10px;
+}
+
+.graphBoxmap .box {
+    padding-right: 25px;
+    padding-bottom: 24px;
+    padding-left: 12px;
+}
+
+.heatmapBoxmap {
+    position: relative; 
+    width: 100%;
+    padding: 5px;
+}
+
+.heatmapBoxmap .box {
+    padding-left: 12px;
+    padding-right: 20px;
+    padding-bottom: 24px;
+}
+

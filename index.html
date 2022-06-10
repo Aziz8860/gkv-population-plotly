@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.plot.ly/plotly-2.12.1.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.1.1/d3.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="favicon-32x32.png" />
+    <title>GKV - Plotly</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row my-4 text-center">
+        <h1 class="text-center fw-bold">Proyek GKV</h1>
+        <h4 class="text-center">Visualisasi Data Populasi Dunia</h4>
+        <p>plotly</p>
+      </div>
+    </div>
+
+    <!-- Add Charts  -->
+    <div class="graphBoxup">
+      <div class="box d-flex flex-row">
+        <div id="pieplot"></div>
+        <div class="pt-4">
+          <h3 class="fw-bold">Persebaran Populasi di Dunia</h3>
+          <p>
+            Cina merupakan negara dengan populasi terbanyak di dunia. Diagram
+            pie di samping merupakan <br> visualisasi perbandingan dari 4 negara populasi terbesar
+            dengan populasi dunia.
+          </p>
+        </div>
+      </div>
+
+      <!-- <div class="box"></div>
+
+      <div class="box"></div>
+
+      <div class="box"></div> -->
+    </div>
+
+    <!-- MAPS -->
+    <div class="graphBoxmap">
+      <div class="box">
+        <div id="mapschart"></div>
+        <div id="mapschartasia"></div>
+        <div id="mapschartnorthamerica"></div>
+        <div id="mapschartsouthamerica"></div>
+        <div id="mapschartafrica"></div>
+        <div id="mapscharteurope"></div>
+        <h5 class="fw-bold">🦚 Observasi:</h5>
+        - Wilayah terpadat di dunia adalah Asia Selatan.
+        <br />
+        - Asia berpenduduk paling padat dibandingkan dengan benua lainnya.
+        <br />
+        - Di benua Eropa, populasi cukup rendah dibandingkan dengan benua
+        lainnya.
+        <br />
+      </div>
+    </div>
+
+    <!-- HEATMAP -->
+    <div class="heatmapBoxmap">
+      <div class="box">
+        <div id="heatmap"></div>
+        <div class="justify-content-center text-center mt-n2 mb-3">
+          <a
+            target="_blank"
+            href="https://github.com/faizbyp/gkv-population/blob/plotly/Perhitungan_Heatmap_dengan_EDA_dan_Pengelompokan_Benua.ipynb"
+            >sumber perhitungan</a
+          >
+        </div>
+        <h5 class="fw-bold">💡 Interpretasi:</h5>
+        - Jumlah populasi berbanding terbalik dengan perubahan penduduk setiap
+        tahunnya (yearly change)
+        <br />
+        - Ada hubungan langsung yang kuat dengan luas negara (land area Km²)
+        dengan populasi
+        <br />
+        - Tingkat kesuburan (fert rate) rendah di negara-negara dengan populasi
+        tinggi
+        <br />
+        - Di negara-negara populasi tinggi, lebih sedikit orang yang tinggal di
+        kota-kota perkotaan (urban pop %)
+        <br />
+        - Populasi memiliki hubungan langsung dengan umur median (median age)
+        <br />
+      </div>
+    </div>
+
+    <!-- Dataset -->
+    <div class="row text-center my-4">
+      <h4 class="fw-bold">Dataset</h4>
+      <a
+        href="https://www.kaggle.com/datasets/anandhuh/countries-in-the-world-by-population-2022"
+        >Countries in the World by Population 2022</a
+      >
+    </div>
+
+    <!-- Kelompok -->
+    <div class="row text-center my-4">
+      <h5>KOM1304 - Grafika Komputer dan Visualisasi</h5>
+      <p>Paralel K2 Kelompok 6</p>
+      <table>
+        <tr>
+          <th class="col-sm-4">Nama</th>
+          <th class="col-sm-4">NIM</th>
+        </tr>
+        <tr>
+          <td>Faiz Byputra</td>
+          <td>G6401201056</td>
+        </tr>
+        <tr>
+          <td>Qais Jabbar Ihkamuddin</td>
+          <td>G6401201120</td>
+        </tr>
+        <tr>
+          <td>Muhammad Arvie Reyhan Nabil</td>
+          <td>G6401201129</td>
+        </tr>
+        <tr>
+          <td>Muhammad Ariq Aziz</td>
+          <td>G6401201093</td>
+        </tr>
+        <tr>
+          <td>A. Naufal Rizad Mangunrawa</td>
+          <td>G6401201048</td>
+        </tr>
+      </table>
+    </div>
+
+    <script src="piechart.js"></script>
+    <script src="mapschart.js"></script>
+    <script src="mapschartasia.js"></script>
+    <script src="mapschartnorthamerica.js"></script>
+    <script src="mapschartsouthamerica.js"></script>
+    <script src="mapschartafrica.js"></script>
+    <script src="mapscharteurope.js"></script>
+    <script src="heatmap.js"></script>
+    <script src="utils.js"></script>
+  </body>
+</html>
